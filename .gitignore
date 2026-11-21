@@ -1,0 +1,54 @@
+# Build directories
+build/
+**/build/
+bin/
+obj/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+aether_standalone
+**/aether_standalone
+
+# CMake generated files
+CMakeFiles/
+**/CMakeFiles/
+CMakeCache.txt
+**/CMakeCache.txt
+cmake_install.cmake
+**/cmake_install.cmake
+Makefile
+**/Makefile
+
+# Node & Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.vite/
+**/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+/tmp/aether_stems/
+
+# OS / Editor
+.DS_Store
+**/.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/

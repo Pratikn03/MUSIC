@@ -1,0 +1,21 @@
+root ::= "{\n"
+  "  \"parameter_delta\": {" param_entries "},\n"
+  "  \"explanation\": " string ",\n"
+  "  \"audio_insight\": " string ",\n"
+  "  \"confidence\": " number "\n"
+  "}"
+
+param_entries ::= ( " " param_pair ( "," param_pair )* )?
+
+param_pair ::= "\n    \"" param_name "\": " number
+
+param_name ::= "input_gain_db" | "phase_invert"
+  | "eq_band1_enable" | "eq_band1_freq" | "eq_band1_gain" | "eq_band1_q"
+  | "eq_band2_enable" | "eq_band2_freq" | "eq_band2_gain" | "eq_band2_q"
+  | "eq_band3_enable" | "eq_band3_freq" | "eq_band3_gain" | "eq_band3_q"
+  | "eq_band4_enable" | "eq_band4_freq" | "eq_band4_gain" | "eq_band4_q"
+  | "comp_enable" | "comp_threshold" | "comp_ratio" | "comp_attack_ms" | "comp_release_ms" | "comp_makeup_gain_db"
+  | "stereo_width" | "pan" | "limiter_enable" | "limiter_ceiling_db" | "output_gain_db"
+
+string ::= "\"" ( [^"\\\x7F\x00-\x1F] | "\\" ["\\/bfnrt] )* "\""
+number ::= "-"? [0-9]+ ( "." [0-9]+ )?

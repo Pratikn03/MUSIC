@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: #0B0D13;
+  }
+}
+
+/* Custom scrollbars for DAW aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0D13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F293D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1A202E;
+  border-radius: 9999px;
+  height: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6366F1;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.6);
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
